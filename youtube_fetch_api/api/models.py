@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Videos(models.Model):
     video_id = models.CharField(
         null= False,
