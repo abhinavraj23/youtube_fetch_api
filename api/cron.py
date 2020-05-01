@@ -32,6 +32,7 @@ class CallYoutubeApi(CronJobBase):
             thumbnailsUrls = item['snippet']['thumbnails']['default']['url' ]
             channel_id = item['snippet']['channelId']
             channel_title = item['snippet']['channelTitle']
+            print(title)
             Videos.objects.create(
                 video_id = video_id,
                 title = title,
@@ -40,6 +41,5 @@ class CallYoutubeApi(CronJobBase):
                 channel_title = channel_title,
                 publishedTime = publishedDateTime,
                 thumbnailsUrls = thumbnailsUrls,
-
             )
 

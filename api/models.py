@@ -34,3 +34,9 @@ class Videos(models.Model):
         blank= True,
         max_length= 500
     )
+
+    created = models.DateTimeField(
+        auto_now_add=True,
+        null= True,
+        blank= True,
+    )
