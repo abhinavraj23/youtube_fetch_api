@@ -14,7 +14,7 @@ class CallYoutubeApi(CronJobBase):
 
     schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
     code = 'api.call_youtube_api'    # a unique code
-    time_now = datetime.now
+    time_now = datetime.now()
     last_request_time = time_now - timedelta(minutes=10)
 
     def do(self):
