@@ -20,6 +20,10 @@ class CallYoutubeApi(CronJobBase):
     def do(self):
         apiKey = settings.GOOGLE_API_KEY
         youtube = build("youtube", "v3", developerKey= apiKey)
+        
+        # SOME BUG IS COMMING IN ISO FORMAT
+        #req = youtube.search().list(q = "news", part = "snippet", order = "date", publishedAfter = self.last_request_time.isoformat())
+
         req = youtube.search().list(q = "news", part = "snippet", order = "date")
         res = req.execute()
 
