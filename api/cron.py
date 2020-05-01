@@ -24,7 +24,7 @@ class CallYoutubeApi(CronJobBase):
         # SOME BUG IS COMMING IN ISO FORMAT
         #req = youtube.search().list(q = "news", part = "snippet", order = "date", publishedAfter = self.last_request_time.isoformat())
 
-        req = youtube.search().list(q = "cricket", part = "snippet", order = "date")
+        req = youtube.search().list(q = "cricket", part = "snippet", order = "date",publishedAfter=(self.last_request_time.replace(microsecond=0).isoformat()+'Z'))
         res = req.execute()
 
         for item in res['items']:
