@@ -2,7 +2,7 @@ import os
 # Cron Job
 from django_cron import CronJobBase, Schedule
 
-#Google API
+# Google API
 from apiclient.discovery import build
 
 from .models import *

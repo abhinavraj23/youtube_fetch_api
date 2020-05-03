@@ -13,8 +13,11 @@ class ResultsPagination(CursorPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
+# Searching is implemented using DRF Filters
+# DRF filter by default uses [icontains] and thus the search by default supports partial searches
+
 class YoutubeItems(generics.ListAPIView):
-    search_fields = ['title']
+    search_fields = ['title','description']
     filter_backends = (filters.SearchFilter,)
     queryset = Videos.objects.all().order_by('-publishedDateTime')
     serializer_class = VideosSerializer
