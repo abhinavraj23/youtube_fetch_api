@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_cron',
+    'django_crontab',
     'rest_framework',
     'api'
 ]
@@ -62,6 +63,10 @@ MIDDLEWARE = [
 CRON_CLASSES = [
     "api.cron.CallYoutubeApi",
 ]
+
+# CRONJOBS = [
+#     ('*/5 * * * *', 'youtube_fetch_api.api.cron.CallYoutubeApi','>> ~/work/fam_pay_task/youtube_fetch_api/cron_job.log')
+# ]
 
 ROOT_URLCONF = 'youtube_fetch_api.urls'
 
