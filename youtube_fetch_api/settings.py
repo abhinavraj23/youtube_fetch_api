@@ -133,7 +133,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-GOOGLE_API_KEY = env("GOOGLE_API_KEY")
+GOOGLE_API_KEYS = []
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',

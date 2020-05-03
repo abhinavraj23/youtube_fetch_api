@@ -13,7 +13,7 @@ Used Cron Jobs [django_cron](https://django-cron.readthedocs.io/en/latest/introd
 - Clone the project
 - As this project is based on Django, your system need to have proper python setup, refer [this](https://www.python.org/downloads/)
 - Go the project through the terminal and install all dependencies by using typing `pip install -r requirements.txt` in the terminal
-- Inside the youtube_fetch_api directory make a `.env` file and type `GOOGLE_API_KEY=[YOUR_GOOGLE_API_KEY]`
+- Inside the `setting.py` file, fill the variable `GOOGLE_API_KEYS` with all the API Keys available,the list should be filled as `['API_KEY_1','API_KEY_2',...]`
 - For getting an API key follow [this](https://developers.google.com/youtube/v3/getting-started)
 - Setup crontab to run Job, Follow [this](https://django-cron.readthedocs.io/en/latest/installation.html)
 - Run the server using `python mange.py runserver`
