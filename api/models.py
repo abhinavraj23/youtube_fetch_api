@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.search import SearchVectorField, SearchVector
 
 class Videos(models.Model):
     video_id = models.CharField(
@@ -40,3 +41,12 @@ class Videos(models.Model):
         null=True,
         blank=True,
     )
+
+    title_vector = SearchVectorField(null=True)
+
+    def make_search_vector(self):
+        self.title_vector=SearchVector('title')
+
+    def save(self, *args, **kwargs):
+        self.make_search_vector()
+        super(models.Model, self).save(*args, **kwargs)

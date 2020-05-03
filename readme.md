@@ -27,3 +27,6 @@ For visualization through a dashboard one may directly run the app locally and t
 
 ### Filters
 ![Filters](screenshot/filters.png)
+
+### Change in this branch
+Added full text seearch funtionality using postgresql
