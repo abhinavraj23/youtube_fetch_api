@@ -2,7 +2,7 @@ cachetools==3.1.1
 certifi==2019.9.11
 chardet==3.0.4
 environ==1.0
-Django==2.2.10
+Django==2.2.28
 django-common-helpers==0.9.2
 django-cron==0.5.1
 django-crontab==0.7.1
