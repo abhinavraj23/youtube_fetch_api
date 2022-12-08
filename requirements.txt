@@ -1,5 +1,5 @@
 cachetools==3.1.1
-certifi==2019.9.11
+certifi==2022.12.7
 chardet==3.0.4
 environ==1.0
 Django==2.2.10
